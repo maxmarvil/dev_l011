@@ -1,0 +1,199 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_ST_STM32L0:STM32L011D3Px U?
+U 1 1 5DE68725
+P 5300 3200
+F 0 "U?" H 5300 3881 50  0000 C CNN
+F 1 "STM32L011D3Px" H 5300 3790 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 5000 2700 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00206508.pdf" H 5300 3200 50  0001 C CNN
+	1    5300 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5DE68B47
+P 4600 3900
+F 0 "#PWR?" H 4600 3750 50  0001 C CNN
+F 1 "+3.3V" H 4615 4073 50  0000 C CNN
+F 2 "" H 4600 3900 50  0001 C CNN
+F 3 "" H 4600 3900 50  0001 C CNN
+	1    4600 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5DE69085
+P 4650 2400
+F 0 "#PWR?" H 4650 2250 50  0001 C CNN
+F 1 "+3.3V" H 4665 2573 50  0000 C CNN
+F 2 "" H 4650 2400 50  0001 C CNN
+F 3 "" H 4650 2400 50  0001 C CNN
+	1    4650 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DE69611
+P 5300 3800
+F 0 "#PWR?" H 5300 3550 50  0001 C CNN
+F 1 "GND" H 5305 3627 50  0000 C CNN
+F 2 "" H 5300 3800 50  0001 C CNN
+F 3 "" H 5300 3800 50  0001 C CNN
+	1    5300 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5DE6A9D1
+P 4650 2550
+F 0 "C?" H 4765 2596 50  0000 L CNN
+F 1 "1uF" H 4765 2505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 4688 2400 50  0001 C CNN
+F 3 "~" H 4650 2550 50  0001 C CNN
+	1    4650 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 2700 5300 2700
+$Comp
+L Device:R R?
+U 1 1 5DE6E3E2
+P 4600 3750
+F 0 "R?" H 4670 3796 50  0000 L CNN
+F 1 "1MOm" H 4670 3705 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 4530 3750 50  0001 C CNN
+F 3 "~" H 4600 3750 50  0001 C CNN
+	1    4600 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 3600 4900 3600
+Text GLabel 5700 3300 2    50   Output ~ 0
+scl
+Text GLabel 5700 3400 2    50   Output ~ 0
+sda
+Text GLabel 5700 2900 2    50   Output ~ 0
+rx
+Text GLabel 5700 3100 2    50   Output ~ 0
+tx
+Text GLabel 5700 3600 2    50   Output ~ 0
+swclk
+Text GLabel 5700 3500 2    50   Output ~ 0
+swdio
+$Comp
+L Switch:SW_Push SW?
+U 1 1 5DE7778D
+P 3500 2600
+F 0 "SW?" H 3500 2885 50  0000 C CNN
+F 1 "Reset" H 3500 2794 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_PTS810" H 3500 2800 50  0001 C CNN
+F 3 "~" H 3500 2800 50  0001 C CNN
+	1    3500 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DE77EA6
+P 3300 2600
+F 0 "#PWR?" H 3300 2350 50  0001 C CNN
+F 1 "GND" H 3305 2427 50  0000 C CNN
+F 2 "" H 3300 2600 50  0001 C CNN
+F 3 "" H 3300 2600 50  0001 C CNN
+	1    3300 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DE789B3
+P 4250 2900
+F 0 "#PWR?" H 4250 2650 50  0001 C CNN
+F 1 "GND" H 4255 2727 50  0000 C CNN
+F 2 "" H 4250 2900 50  0001 C CNN
+F 3 "" H 4250 2900 50  0001 C CNN
+	1    4250 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5DE793C4
+P 4250 2750
+F 0 "C?" H 4365 2796 50  0000 L CNN
+F 1 "100pF" H 4365 2705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 4288 2600 50  0001 C CNN
+F 3 "~" H 4250 2750 50  0001 C CNN
+	1    4250 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5DE7A2EE
+P 4050 2300
+F 0 "#PWR?" H 4050 2150 50  0001 C CNN
+F 1 "+3.3V" H 4065 2473 50  0000 C CNN
+F 2 "" H 4050 2300 50  0001 C CNN
+F 3 "" H 4050 2300 50  0001 C CNN
+	1    4050 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DE872B6
+P 4050 2450
+F 0 "R?" H 4120 2496 50  0000 L CNN
+F 1 "10kOm" H 4120 2405 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3980 2450 50  0001 C CNN
+F 3 "~" H 4050 2450 50  0001 C CNN
+	1    4050 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 2600 4050 2600
+Wire Wire Line
+	4050 2600 4250 2600
+Connection ~ 4050 2600
+Wire Wire Line
+	4500 2900 4900 2900
+Wire Wire Line
+	4500 2900 4500 2600
+Wire Wire Line
+	4500 2600 4250 2600
+Connection ~ 4250 2600
+$Comp
+L Device:Crystal Y?
+U 1 1 5DE94AF6
+P 4100 3400
+F 0 "Y?" V 4054 3531 50  0000 L CNN
+F 1 "8MHz" V 4145 3531 50  0000 L CNN
+F 2 "Crystal:Crystal_SMD_FOX_FE-2Pin_7.5x5.0mm_HandSoldering" H 4100 3400 50  0001 C CNN
+F 3 "~" H 4100 3400 50  0001 C CNN
+	1    4100 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4900 3300 4450 3300
+Wire Wire Line
+	4450 3300 4450 3250
+Wire Wire Line
+	4450 3250 4100 3250
+Wire Wire Line
+	4100 3550 4550 3550
+Wire Wire Line
+	4550 3550 4550 3400
+Wire Wire Line
+	4550 3400 4900 3400
+$EndSCHEMATC
