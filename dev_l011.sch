@@ -15,17 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MCU_ST_STM32L0:STM32L011D3Px U1
-U 1 1 5DEF3D36
-P 5100 3300
-F 0 "U1" H 5100 3981 50  0000 C CNN
-F 1 "STM32L011D3Px" H 5100 3890 50  0000 C CNN
-F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 4800 2800 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00206508.pdf" H 5100 3300 50  0001 C CNN
-	1    5100 3300
-	1    0    0    -1  
-$EndComp
-$Comp
 L Regulator_Linear:XC6206PxxxMR U2
 U 1 1 5DEFFB9C
 P 6050 1950
@@ -263,14 +252,9 @@ F 3 "~" H 3000 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4750 3400 4700 3400
-Wire Wire Line
 	4000 3400 4000 3000
 Wire Wire Line
 	2900 3000 2900 3250
-Connection ~ 4700 3400
-Wire Wire Line
-	4700 3400 4000 3400
 Wire Wire Line
 	4700 3500 3900 3500
 Wire Wire Line
@@ -464,22 +448,6 @@ $EndComp
 Wire Wire Line
 	5500 3000 6050 3000
 Wire Wire Line
-	6050 3000 6050 2850
-Wire Wire Line
-	6050 2850 6450 2850
-Wire Wire Line
-	5500 3100 6150 3100
-Wire Wire Line
-	6150 3100 6150 2950
-Wire Wire Line
-	6150 2950 6450 2950
-Wire Wire Line
-	5500 3200 6250 3200
-Wire Wire Line
-	6250 3200 6250 3050
-Wire Wire Line
-	6250 3050 6450 3050
-Wire Wire Line
 	5500 3300 6200 3300
 Wire Wire Line
 	6200 3300 6200 3350
@@ -525,4 +493,36 @@ Text GLabel 6450 2650 0    50   Input ~ 0
 IO14
 Text GLabel 6450 2750 0    50   Input ~ 0
 IO15
+Wire Wire Line
+	4700 3400 4000 3400
+Wire Wire Line
+	4750 3400 4700 3400
+Connection ~ 4700 3400
+$Comp
+L MCU_ST_STM32L0:STM32L011D3Px U1
+U 1 1 5DEF3D36
+P 5100 3300
+F 0 "U1" H 5100 3981 50  0000 C CNN
+F 1 "STM32L011D3Px" H 5100 3890 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 4800 2800 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00206508.pdf" H 5100 3300 50  0001 C CNN
+	1    5100 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 3100 6100 3100
+Wire Wire Line
+	5500 3200 6150 3200
+Wire Wire Line
+	6050 3000 6050 2850
+Wire Wire Line
+	6050 2850 6450 2850
+Wire Wire Line
+	6100 3100 6100 2950
+Wire Wire Line
+	6100 2950 6450 2950
+Wire Wire Line
+	6150 3200 6150 3050
+Wire Wire Line
+	6150 3050 6450 3050
 $EndSCHEMATC
